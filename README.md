@@ -61,8 +61,8 @@ public:
         for (auto e : GetEntities()) {
             auto &position = e.GetComponent<PositionComponent>();
             const auto &velocity = e.GetComponent<VelocityComponent>();
-            position.x += velocity.x;
-            position.y += velocity.y;
+            position.x += velocity.dx;
+            position.y += velocity.dy;
         }
     }
 };
